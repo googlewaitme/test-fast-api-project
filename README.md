@@ -3,4 +3,4 @@
 1) для реализации я выбрал
   - fast-api
   - tortoiseOrm
-  - sqlite
+  - postgress
