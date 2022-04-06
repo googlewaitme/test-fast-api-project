@@ -5,6 +5,7 @@
   - tortoiseOrm
   - sqlite
 ### Развертывание
+
   pip3 install -r requirements.txt
   cd src
   uvicorn main:app --reload
