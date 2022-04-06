@@ -41,5 +41,6 @@ async def get_total_supply():
     токенов в сети.
     Форма ответа - произвольная, в JSON-формате.
     """
-    data = contract.functions.totalSupply().buildTransaction()
-    return data
+    transaction = contract.functions['totalSupply']
+    total_supply = transaction().call()
+    return {'data': total_supply}
