@@ -5,7 +5,7 @@ from tortoise.contrib.pydantic import pydantic_model_creator
 class Token(models.Model):
     id = fields.IntField(pk=True)
     unique_hash = fields.CharField(max_length=20, unique=True)
-    tx_hash = fields.CharField(max_length=100)
+    tx_hash = fields.CharField(max_length=256)
     media_url = fields.CharField(max_length=256)
     owner = fields.CharField(max_length=256)
 
