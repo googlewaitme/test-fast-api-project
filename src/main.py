@@ -4,6 +4,8 @@ from tortoise.contrib.fastapi import register_tortoise
 
 from routers import tokens
 
+from loader import w3, contract
+
 
 app = FastAPI()
 

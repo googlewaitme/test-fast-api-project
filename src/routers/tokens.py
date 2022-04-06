@@ -3,6 +3,7 @@ from typing import List
 
 from models.token import Token_Pydantic, TokenIn_Pydantic, Token
 from utils.generate_random_string import get_random_string
+from loader import contract
 
 
 router = APIRouter(
@@ -39,8 +40,6 @@ async def get_total_supply():
     информацию о текущем Total supply токена - общем числе находящихся
     токенов в сети.
     Форма ответа - произвольная, в JSON-формате.
-
-    Минимальный базовый пример ответа - {"result": 10000}
     """
-    example_data = {'result_example': 1000}
-    return example_data
+    data = contract.functions.totalSupply().buildTransaction()
+    return data
