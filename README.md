@@ -1,6 +1,12 @@
 # test-fast-api-project
 
-1) для реализации я выбрал
+### Для реализации я выбрал
   - fast-api
   - tortoiseOrm
-  - postgress
+  - sqlite
+### Развертывание
+
+    pip3 install -r requirements.txt
+    cd src
+    uvicorn main:app --reload
+  
